@@ -14,7 +14,10 @@ const database_connection = require("./database/db.js")
 database_connection();
 
 const routefunc = require("./routes/route")
-app.use("/",routefunc)
+app.use("/",routefunc);
+app.get("/",(req,res)=>{
+    res.send("Welcome on Users table page.....");
+})
 
 const PORT = process.env.Port || 3051;
 app.listen(PORT, ()=> console.log(`server is listening at port ${PORT}`) )
