@@ -16,8 +16,8 @@ database_connection();
 const routefunc = require("./routes/route")
 app.use("/",routefunc);
 app.get("/",(req,res)=>{
-    res.send("Welcome on Users table page.....,hello...");
+    res.send("Welcome on Users table page..");
 })
 
-const PORT = process.env.Port || 3051;
+const PORT = process.env.Port || 5000;
 app.listen(PORT, ()=> console.log(`server is listening at port ${PORT}`) )

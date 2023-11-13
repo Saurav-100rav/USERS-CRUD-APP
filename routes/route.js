@@ -26,8 +26,10 @@ router.post("/adduser",async(req,res)=>{
 router.get("/all",async(req,res)=>{
         try {
           const users =  await User.find({});
+          console.log(`${users.length} users available..`)
           res.send(users);
         } catch (error) {
+            console.log("error while getting all users information..",error);
             res.status(404).json({message:error})
         }
 })
